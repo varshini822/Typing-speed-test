@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-keyboard"></i> Typing Speed Test</h1>
+            <p class="subtitle">Measure your typing speed and accuracy in real-time</p>
+        </header>
+        
+        <div class="game-controls">
+            <div class="difficulty-selector">
+                <label for="difficulty"><i class="fas fa-sliders-h"></i> Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-card" id="wpm">
+                <div class="stat-value">0</div>
+                <div class="stat-label">Words Per Minute</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="stat-card" id="errors">
+                <div class="stat-value">0</div>
+                <div class="stat-label">Errors</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="stat-card" id="timer">
+                <div class="stat-value">60</div>
+                <div class="stat-label">Seconds Left</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                </div>
+            </div>
+            <div class="stat-card" id="accuracy">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Accuracy</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sentence-container">
+            <div id="sentence">Press Start to begin the typing test...</div>
+        </div>
+        
+        <div class="input-container">
+            <textarea id="typing-input" placeholder="Start typing here when the test begins..." disabled></textarea>
+        </div>
+        
+        <div class="controls">
+            <button id="start-btn"><i class="fas fa-play"></i> Start Test</button>
+            <button id="restart-btn"><i class="fas fa-redo"></i> Restart</button>
+        </div>
+        
+        <div class="instructions">
+            <h3><i class="fas fa-info-circle"></i> How to Play:</h3>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Press "Start Test" to begin the timer</li>
+                <li><i class="fas fa-check-circle"></i> Type the sentence shown above as quickly and accurately as possible</li>
+                <li><i class="fas fa-check-circle"></i> Your words per minute (WPM), errors, and accuracy will update in real-time</li>
+                <li><i class="fas fa-check-circle"></i> Press "Restart" to reset the test at any time</li>
+                <li><i class="fas fa-check-circle"></i> Try to beat your high score with each attempt!</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <div class="high-score">High Score: <span id="high-score-value">0</span> WPM</div>
+            <div>Typing Speed Test Game &copy; 2023 | Measure your typing skills</div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
